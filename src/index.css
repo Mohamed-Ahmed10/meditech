@@ -1,0 +1,551 @@
+:root {
+  --main-color: #0F67FE;
+  --white-color: #FFFFFF;
+  --secwhite-color: #FCFCFC;
+  --dark-color: #1E232C;
+  --light-color: #A1B9E5;
+  --black-color: #040919;
+  --gray-color: #57657F;
+  --red-colo: #BB2E2E;
+  --green-color: #2FBA45;
+  --login-color: #BCC3CE;
+  --input-color: #CCCCCC;
+
+
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Outfit", "Plus Jakarta Sans", sans-serif;
+}
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: initial 0 0 5px transparent;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #007fff;
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0F67FE;
+}
+
+
+
+
+
+
+
+
+/* START NAVBAR */
+.navbar {
+  background-color: var(--main-color);
+}
+
+/* #main {
+  padding-right: 30px;
+} */
+.nav-icon a {
+  color: var(--secwhite-color) !important;
+}
+
+.icon {
+  font-size: 30px;
+  color: var(--secwhite-color);
+}
+
+.navbar-collapse {
+  margin-right: 18%;
+}
+
+.navbar .first-text {
+  color: var(--secwhite-color);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  width: 800;
+  size: 30px;
+
+}
+
+.navbar .navbar-nav .nav-link {
+  color: var(--secwhite-color);
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--secwhite-color) !important;
+}
+
+.navbar .navbar-nav .nav-link:not(.active) {
+  color: var(--light-color);
+}
+
+.navbar .navbar-toggler {
+  color: white;
+  font-size: 15px;
+  border-color: white;
+
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* END NAVBAR */
+/* START LANDING SECTION */
+.landing {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url(./components/images/1.jpeg);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - 72px);
+}
+
+.landing h1 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 46px;
+
+  color: var(--secwhite-color);
+
+}
+
+.landing p {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 37px;
+  color: var(--secwhite-color);
+}
+
+.main-btn {
+  color: var(--secwhite-color);
+  background-color: var(--main-color);
+  width: 230px;
+  height: 60px;
+  border-radius: 8px;
+
+}
+
+.main-btn:hover {
+  color: var(--secwhite-color);
+}
+
+
+/* END LANDING SECTION */
+/* START SERVICES */
+h2 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 800 !important;
+  font-size: 45px;
+
+}
+
+
+
+/* END SERVICES */
+
+
+
+/* START LOGIN */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100v;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+  background: #fffefe;
+}
+
+.login-form h1 {
+  font-family: "Plus Jakarta Sans";
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -1%;
+  padding-top: 15%;
+  padding-bottom: 30px;
+  color: #0F67FE;
+}
+
+.text-left {
+  font-weight: bold;
+  font-size: 25px;
+  color: #1E232C;
+}
+
+.input-field {
+  width: 90%;
+  border: 2px solid var(--login-color);
+  color: var(--login-color);
+  border-radius: 5px;
+
+
+}
+
+.input-field input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 90%;
+
+}
+
+::placeholder {
+  color: var(--login-color);
+}
+
+.input-field:hover {
+  border: 2px solid #7ba6f1;
+}
+
+
+.check {
+  color: var(--login-color);
+}
+
+input[type="checkbox" i] {
+  background-color: var(--main-color);
+}
+
+#submit {
+  width: 90%;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  background: #0F67FE;
+  color: #FFFFFF;
+  border: 1px solid #4a88f4;
+  font-size: 20px;
+}
+
+/* content */
+.content-login {
+  width: 50%;
+  background: #0F67FE;
+  border: none;
+  height: 100vh;
+
+
+
+}
+
+.content-login-top img {
+  width: 75%;
+  padding-top: 5%;
+  padding-left: 3%;
+}
+
+.text-right {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 800;
+  font-size: 35px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+
+/* END LOGIN */
+/*  START SCHEDULE-SECTION  */
+.ui-widget.ui-widget-content {
+  border: 0px;
+}
+
+.ui-widget-header {
+  border: none;
+  background: none;
+  color: #333333;
+  font-weight: bold;
+  display: flex;
+
+}
+
+.ui-tabs .ui-tabs-nav li {
+  list-style: none;
+  position: relative;
+  top: 0;
+  margin: 0 26px 5px 0;
+  border: 1px solid var(--main-color);
+  /* white-space: nowrap; */
+  width: 236px;
+  height: 250px;
+
+}
+
+.days {
+  overflow-x: scroll;
+}
+
+.section-two .tableContainer {
+  border: 15px solid var(--main-color);
+  border-radius: 12px;
+}
+
+/*  END SCHEDULE-SECTION  */
+
+
+
+
+/* START Patient Details */
+.paragragh-top {
+  font-size: 20px;
+}
+
+span {
+  color: var(--input-color);
+}
+
+.i-login {
+  color: var(--secwhite-color);
+}
+
+/* .i-login:hover {
+  color: var(--secwhite-color);
+} */
+
+.patient-details {
+  background-color: var(--light-color);
+  padding: 10px;
+  border-radius: 5px;
+
+}
+
+.row-one {
+  border: none;
+}
+
+.sec-two .prescriptions {
+  background-color: var(--light-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.sec-two .prescriptions .info-row-one .top-left .info-top,
+.info-but {
+
+  border-radius: 5px;
+
+}
+
+.sec-two .prescriptions .top-right {
+  border-radius: 5px;
+
+}
+
+.sec-3th .prescriptions {
+  background-color: var(--light-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.fa-circle-plus {
+
+  color: var(--gray-color);
+}
+
+.fa-trash {
+  color: var(--red-colo);
+}
+
+.trashstyle {
+  height: 40px;
+}
+
+.fa-pen {
+  color: var(--green-color);
+}
+
+.box-icon {
+  background-color: var(--input-color);
+  border-radius: 50%;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  text-align: center;
+
+
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #57657F;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: .3rem;
+  outline: 0;
+  color: var(--white-color);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.modal-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1rem;
+  border-bottom: 0 solid #dee2e6;
+  border-top-right-radius: calc(.3rem - 1px);
+}
+
+.modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: .75rem;
+  border-top: 0px solid #dee2e6;
+  border-bottom-right-radius: calc(.3rem - 1px);
+  border-bottom-left-radius: calc(.3rem - 1px);
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: var(--white-color);
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 20px;
+  width: 180px;
+  height: 50px;
+  border-radius: .25rem;
+
+  /* transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; */
+}
+
+.bg-transparent {
+  height: 50px;
+  border: 2px solid var(--white-color);
+  border-radius: 3px;
+  color: var(--input-color);
+}
+
+.modal-title {
+  font-weight: 800;
+  font-size: 35px;
+}
+
+.diagnosetext {
+  width: 525px;
+  height: 159px;
+
+
+}
+
+.modal-content2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  pointer-events: auto;
+  background-color: #57657F;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: .3rem;
+  outline: 0;
+  color: var(--white-color);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 0;
+  padding-left: 0;
+
+
+}
+
+
+/* END Patient Details */
+
+/* START FOOTER */
+footer {
+  background-color: var(--black-color);
+
+
+}
+
+h3 {
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+  width: 800;
+  size: 30px;
+
+
+}
+
+footer ul li {
+  font-size: 13px;
+  padding-top: 12px;
+
+
+}
+
+footer .container {
+  padding-top: 60px;
+
+}
+
+footer .container .row {
+  padding-bottom: 50px;
+}
+
+/* END FOOTER */
+
+
+.subTitle {
+  font-size: 1.7rem;
+}
+
+.dayData {
+  cursor: pointer;
+  height: 100px;
+  line-height: 100px;
+  width: 210px;
+}
+
+.dayData.active,
+.dayData:hover {
+  background-color: var(--main-color);
+  color: #FFF
+}

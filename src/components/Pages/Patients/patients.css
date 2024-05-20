@@ -1,0 +1,309 @@
+:root {
+  --main-color: #0f67fe;
+  --white-color: #ffffff;
+  --secwhite-color: #fcfcfc;
+  --dark-color: #1e232c;
+  --light-color: #a1b9e5;
+  --black-color: #040919;
+  --gray-color: #57657f;
+  --red-colo: #bb2e2e;
+  --green-color: #2fba45;
+  --login-color: #bcc3ce;
+  --input-color: #cccccc;
+}
+
+span {
+  color: var(--input-color);
+}
+
+.i-login {
+  color: var(--secwhite-color);
+}
+
+.sec-one .paragragh-top {
+  font-size: 20px;
+}
+.sec-one .patient-details {
+  background-color: var(--light-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+.sec-one .patient-details .row-one {
+  border: none;
+}
+
+.prescriptions {
+  background-color: var(--light-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+.prescriptions button i {
+  color: var(--gray-color);
+}
+.prescriptions .info-row-one {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.prescriptions .info-row-one .top-left .info-top,
+.prescriptions .info-row-one .top-left .info-but {
+  border-radius: 5px;
+}
+.prescriptions .info-row-one .top-left .delete_forever {
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: var(--light-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.prescriptions .fa-trash {
+  color: var(--red-colo);
+}
+.prescriptions .trashstyle {
+  height: 40px;
+  cursor: pointer;
+}
+.prescriptions .fa-pen {
+  color: var(--green-color);
+}
+.prescriptions .icons {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+.prescriptions .icons .btn {
+  font-weight: bold;
+  font-size: 22px;
+  padding: 10px 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.sec-two .btn {
+  display: inline-block;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: var(--white-color);
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 20px;
+  width: 180px;
+  height: 50px;
+  border-radius: 0.25rem;
+}
+.sec-two .bg-transparent {
+  height: 50px;
+  border: 2px solid var(--white-color);
+  border-radius: 3px;
+  color: var(--input-color);
+}
+
+.sec-3th .prescriptions {
+  background-color: var(--light-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+.sec-3th .prescriptions .fa-circle-plus {
+  color: var(--gray-color);
+}
+
+.modal-special {
+  position: fixed;
+  width: 30%;
+  min-height: 250px;
+  padding: 20px 30px;
+  margin: auto;
+  background: #57657f;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: #fff;
+  left: 50%;
+  top: 10%;
+  z-index: 99999;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+}
+.modal-special h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+.modal-special .row {
+  align-items: center;
+}
+.modal-special .row label {
+  width: 100px;
+  font-size: 22px;
+}
+.modal-special .row input {
+  margin-left: 10px;
+  width: 300px;
+  display: block;
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  height: 50px;
+  outline: none;
+  font-size: 20px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.modal-special .row .dropdown {
+  width: 320px;
+}
+.modal-special .row .dropdown .btn {
+  background-color: #fff;
+  color: #000;
+}
+.modal-special .row .dropdown .dropdown-menu {
+  max-height: 250px;
+  overflow-y: auto;
+}
+.modal-special .row .dropdown .dropdown-menu .dropdown-item {
+  cursor: pointer;
+}
+.modal-special .row .dropdown .dropdown-menu .dropdown-item:first-of-type {
+  background-color: var(--main-color);
+}
+.modal-special .row button {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 20px;
+  font-size: 22px;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+}
+.modal-special .row .submit {
+  margin: 0 20px;
+}
+.modal-special .row.buttons {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.modal-special.hide {
+  top: -5000px;
+}
+
+.modal-diagnoses {
+  position: fixed;
+  width: 40%;
+  min-height: 200px;
+  padding: 20px;
+  margin: auto;
+  background: #57657f;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: #fff;
+  left: 50%;
+  top: 20%;
+  z-index: 99999;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+}
+.modal-diagnoses h2 {
+  text-align: center;
+  font-weight: normal;
+}
+.modal-diagnoses textarea {
+  padding: 10px;
+  width: 100%;
+  height: 200px;
+  background: transparent;
+  border: 1px solid #fff;
+  outline: none;
+  color: #fff;
+}
+.modal-diagnoses .row {
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.modal-diagnoses .row button {
+  background: #fff;
+  color: #000;
+}
+
+.modal-diagnoses.hide {
+  top: -5000px;
+}
+
+.overly {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.overly.hide {
+  width: 0;
+  height: 0;
+}
+
+.info-diagnoses .icons {
+  margin: 0;
+}
+.info-diagnoses .icons button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: var(--light-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.remove-prescriptions {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}/*# sourceMappingURL=patients.css.map */
