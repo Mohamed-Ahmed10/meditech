@@ -131,10 +131,10 @@ const Content = () => {
               />
             </div>
             <div className="icons">
-              <button onClick={applyPrescriptions} className="btn me-5">
+              <button onClick={applyPrescriptions} className="btn btn-info my-3 me-5">
                 Apply Prescriptions
               </button>
-              <button onClick={cancelPrescriptions} className="btn">
+              <button onClick={cancelPrescriptions} className="btn btn-danger my-3">
                 Cancel Prescriptions
               </button>
             </div>

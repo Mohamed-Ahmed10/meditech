@@ -49,25 +49,7 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
       </li>
     );
   });
-  const medicationNames = boxesContent.map((el) => {
-    return (
-      <div key={el.id} className="top-left bg-white d-flex me-4 p-3 mb-2 rounded-2  justify-content-between align-items-center">
-        <div className="info-box">
-          <div className="info-top d-flex">
-            <h5 className="pe-3">{Prescriptions} Name</h5>
-            <p className="pe-3">{el.name}</p>
-          </div>
-          <div className="info-but d-flex ">
-            <h5 className="pe-3">{Prescriptions} {modalInput}</h5>
-            <p className="pe-3">{el[modalInput]} {Prescriptions === "Medicine" ? "Times a day" : ""}</p>
-          </div>
-        </div>
-        <button onClick={() => btnRemoveBox(el.id)} className="me-5 delete_forever d-flex align-items-center justify-content-center ">
-          <i className="fa-solid fa-trash"></i>
-        </button>
-      </div>
-    );
-  });
+  console.log(boxesContent)
   //   Function
 
   function handleApply() {
@@ -161,7 +143,42 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
             <i className="fa-solid fa-circle-plus"></i>
           </button>
         </h4>
-        <div className="info-row-one d-grid ">{medicationNames}</div>
+        <div className="info-row-one d-grid ">
+          {
+            boxesContent.length > 0
+              ?
+              (
+                boxesContent.map((el) =>
+                  <div key={el.id} className="top-left bg-white d-flex me-4 p-3 mb-2 rounded-2  justify-content-between align-items-center">
+                    <div className="info-box">
+                      <div className="info-top d-flex">
+                        <h5 className="pe-3">{Prescriptions} Name : </h5>
+                        <p className="pe-3">{el.name}</p>
+                      </div>
+                      <div className="info-but d-flex ">
+                        <h5 className="pe-3">{Prescriptions} {modalInput} : </h5>
+                        <p className="pe-3">{el[modalInput]} {Prescriptions === "Medicine" ? "Times a day" : ""}</p>
+                      </div>
+                    </div>
+                    <button onClick={() => btnRemoveBox(el.id)} className="me-5 delete_forever d-flex align-items-center justify-content-center ">
+                      <i className="fa-solid fa-trash"></i>
+                    </button>
+                  </div>
+                )
+              )
+              :
+              <div className="top-left bg-white d-flex me-4 p-3 mb-2 rounded-2  justify-content-between align-items-center">
+                <div className="info-box">
+                  <div className="info-top d-flex">
+                    <h5 className="pe-3">{Prescriptions} Name : </h5>
+                  </div>
+                  <div className="info-but d-flex ">
+                    <h5 className="pe-3">{Prescriptions} {modalInput} : </h5>
+                  </div>
+                </div>
+              </div>
+          }
+        </div>
       </div>
     </>
   );
