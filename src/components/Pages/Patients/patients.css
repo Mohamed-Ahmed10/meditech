@@ -287,6 +287,8 @@
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
+  background-color: #fff !important;
+  color: initial !important;
 }
 
 /*# sourceMappingURL=patients.css.map */

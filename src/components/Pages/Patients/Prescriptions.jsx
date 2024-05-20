@@ -53,7 +53,7 @@ const Prescriptions = () => {
             <Box name="X-Ray" boxes={el.tests} />
             <button
               onClick={() => removePrescriptions(el.prescriptionId)}
-              className="remove-prescriptions btn mt-5 mb-5 btn-danger fs-4 pt-3 pe-5 ps-5"
+              className="remove-prescriptions btn mt-5 mb-5 fs-4"
             >
               Remove
             </button>

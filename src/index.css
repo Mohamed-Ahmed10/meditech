@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 :root {
   --main-color: #0F67FE;
   --white-color: #FFFFFF;
@@ -578,7 +579,6 @@ footer .container .row {
 .swal2-popup button {
   background-color: #fff !important;
   color: initial !important;
-
 }
 
 .swal2-popup {

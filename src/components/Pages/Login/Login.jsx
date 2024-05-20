@@ -1,6 +1,5 @@
 import { useState } from "react";
 import image from "../../images/Doctor.png";
-import logo from "../../images/logo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { getLoginInfo } from "../../store/slice/login-slice.js";
 import { useNavigate } from "react-router-dom";
