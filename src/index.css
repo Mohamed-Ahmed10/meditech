@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 :root {
   --main-color: #0F67FE;
   --white-color: #FFFFFF;
@@ -562,6 +563,34 @@ footer .container .row {
 }
 
 .info {
-  width: 280px;
+  width: 320px;
   justify-content: space-between;
+}
+
+.schedule .table-responsive table,
+.schedule .table-responsive tr,
+.schedule .table-responsive td {
+  border: none
+}
+
+.apply,
+.cancel,
+.swal2-popup button {
+  background-color: #fff !important;
+  color: initial !important;
+
+}
+
+.swal2-popup {
+  background: #57657f;
+  color: #FFF;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm:focus {
+  box-shadow: 0 0 0 0
+}
+
+.modal-diagnoses .buttons {
+  justify-content: center;
+  gap: 10px;
 }

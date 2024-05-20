@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { unmountLogin } from "../store/slice/login-slice.js";
+import logo from "../images/logo.png"
 const Navbar = () => {
   const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem("user"));
@@ -16,8 +17,9 @@ const Navbar = () => {
     <section>
       <nav className="navbar navbar-expand-lg sticky-top ">
         <div className="container">
-          <i className="fa-solid fa-stethoscope icon pe-4"></i>
-          <h3 className="first-text">MediTech</h3>
+          <h3 className="first-text">
+            <img src={logo} alt="Logo" width={140} />
+          </h3>
           <button
             className="navbar-toggler"
             type="button"

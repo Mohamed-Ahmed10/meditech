@@ -42,8 +42,7 @@ const Content = () => {
         dispatch(prescriptionsDetails({ userId, patientId }));
         dispatch(clear());
         Swal.fire({
-          title: "Create Prescriptions Success",
-          text: "You clicked the button!",
+          title: "Prescription Applied successfully!",
           icon: "success",
         });
       }).catch((error) => {
@@ -136,12 +135,12 @@ const Content = () => {
                 addPrescriptions={addDigitalXRay}
               />
             </div>
-            <div className="icons">
-              <button onClick={applyPrescriptions} className="btn btn-info my-3 me-5">
-                Apply Prescriptions
+            <div className="icons text-center">
+              <button onClick={applyPrescriptions} className="apply btn my-3 me-5">
+                Apply
               </button>
-              <button onClick={cancelPrescriptions} className="btn btn-danger my-3">
-                Cancel Prescriptions
+              <button onClick={cancelPrescriptions} className="cancel btn my-3">
+                Cancel
               </button>
             </div>
           </div>

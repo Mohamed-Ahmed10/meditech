@@ -1,5 +1,6 @@
 import { useState } from "react";
 import image from "../../images/Doctor.png";
+import logo from "../../images/logo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { getLoginInfo } from "../../store/slice/login-slice.js";
 import { useNavigate } from "react-router-dom";
@@ -29,7 +30,7 @@ const Login = () => {
             MediTech
           </h1>
           <p className="text-left pb-3 subTitle">Log in to your Account </p>
-          <div className="input-field mb-3 pt-1 pb-1">
+          <div className="input-field mb-3 pt-1 pb-1 position-relative">
             <i className="fas fa-envelope ps-2 pe-2"></i>
             <input
               type="email"
@@ -40,7 +41,7 @@ const Login = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <div className="input-field mb-3  pt-1 pb-1">
+          <div className="input-field mb-3  pt-1 pb-1 position-relative">
             <i className="fas fa-lock ps-2 pe-2 "></i>
             <input
               type={showPassword ? "password" : "text"}
@@ -52,7 +53,7 @@ const Login = () => {
             />
             <span
               onClick={() => setShowPassword(!showPassword)}
-              className="eye-pass position-absolute "
+              className="eye-pass end-0 position-absolute "
             >
               {showPassword ? (
                 <i className="fas fa-eye pe-2"></i>
