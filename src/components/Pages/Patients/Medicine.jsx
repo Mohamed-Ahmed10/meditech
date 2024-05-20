@@ -149,7 +149,7 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
               ?
               (
                 boxesContent.map((el) =>
-                  <div key={el.id} className="top-left bg-white d-flex me-4 w-50 p-3 mb-2 rounded-2  justify-content-between align-items-center pb-4 p-2 box_container">
+                  <div key={el.id} className="top-left bg-white d-flex me-4 w-50 p-3 mb-2 rounded-2  justify-content-between align-items-center pb-5 p-2 box_container">
                     <div className="info-box">
                       <div className="info d-flex">
                         <div className="pe-3">{Prescriptions} Name  </div>
@@ -167,7 +167,7 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
                 )
               )
               :
-              <div className="top-left bg-white d-flex me-4 w-50 p-3 mb-2 rounded-2  justify-content-between align-items-center pb-4 p-2 box_container">
+              <div className="top-left bg-white d-flex me-4 w-50 p-3 mb-2 rounded-2  justify-content-between align-items-center pb-5 p-2 box_container">
                 <div className="info-box">
                   <div className="info d-flex">
                     <div className="pe-3 heading">{Prescriptions} Name  </div>

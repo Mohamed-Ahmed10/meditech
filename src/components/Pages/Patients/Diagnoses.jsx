@@ -65,13 +65,13 @@ const Diagnoses = ({ addPrescriptions }) => {
           <textarea
             ref={Ref}
           ></textarea>
-          <div className="row mt-3">
+          <div className="row mt-4 buttons">
             <button
               type="button"
-              className="btn send me-5"
+              className="submit btn "
               onClick={handleSend}
             >
-              Applay
+              Apply
             </button>
             <button
               type="button"

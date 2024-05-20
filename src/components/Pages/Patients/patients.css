@@ -171,7 +171,8 @@
   background-color: var(--main-color);
 }
 
-.modal-special .row button {
+.modal-diagnoses button,
+.modal-special button {
   display: block;
   width: -moz-fit-content;
   width: fit-content;
@@ -180,6 +181,12 @@
   /* background-col143 */
   font-weight: 600;
   background-color: #fff;
+}
+
+.modal-diagnoses button:hover,
+.modal-special button:hover {
+  background-color: #fff;
+  color: initial !important
 }
 
 .modal-special .row .submit {
@@ -238,17 +245,6 @@
   border: 1px solid #fff;
   outline: none;
   color: #fff;
-}
-
-.modal-diagnoses .row {
-  margin: auto;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.modal-diagnoses .row button {
-  background: #fff;
-  color: #000;
 }
 
 .modal-diagnoses.hide {
