@@ -112,8 +112,8 @@ const Content = () => {
           )}
         </div>
         <div className="sec-two mb-5">
-          <h4>
-            Prescriptions <i className="fa-solid fa-circle-plus "></i>
+          <h4 className="text-center my-3 text-primary fw-bold">
+            Prescriptions
           </h4>
           <div className="prescriptions">
             <Medicine

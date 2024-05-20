@@ -17,9 +17,11 @@ const Diagnoses = ({ addPrescriptions }) => {
   function btnRemoveBox() {
     dispatch(addPrescriptions(null))
   }
-  const content = () => {
-    if (diagnoses) {
-      return (
+  console.log(diagnoses)
+  const content =
+    diagnoses
+      ?
+      (
         <div
           className="info-but info-diagnoses bg-white p-2 col-8 mt-5 d-flex align-items-center justify-content-between "
         >
@@ -35,27 +37,33 @@ const Diagnoses = ({ addPrescriptions }) => {
             </button>
           </div>
         </div>
-      );
-    }
-    return;
-  };
+      ) :
+      (
+        <div
+          className="info-but info-diagnoses bg-white p-2 col-8 mt-5 d-flex align-items-center justify-content-between "
+        >
+          <div className="but-left ">
+            <p className="fs-3">Diagnoses:  </p>
+          </div>
+        </div>
+      )
   return (
     <Fragment>
       <div className={`overly ${showModalDiagnoses ? "" : "hide"}`}></div>
       <h4 className="mt-5">
         Diagnoses
         {/*<-- Button trigger modal --> */}
-          <button
-            type="button"
-            className="btn-icon bg-transparent border-0"
-            onClick={() => setShowModalDiagnoses(true)}
-          >
-            <i className="fa-solid fa-circle-plus"></i>
-          </button>
+        <button
+          type="button"
+          className="btn-icon bg-transparent border-0"
+          onClick={() => setShowModalDiagnoses(true)}
+        >
+          <i className="fa-solid fa-circle-plus"></i>
+        </button>
         <div className={`modal-diagnoses ${showModalDiagnoses ? "" : "hide"}`}>
           <h2>Diagnoses</h2>
           <textarea
-          ref={Ref}
+            ref={Ref}
           ></textarea>
           <div className="row mt-3">
             <button
@@ -75,7 +83,7 @@ const Diagnoses = ({ addPrescriptions }) => {
           </div>
         </div>
       </h4>
-      <div>{content()}</div>
+      <div>{content}</div>
     </Fragment>
   );
 };
