@@ -10,60 +10,38 @@ const Profile = () => {
     fetch(`https://meditech20240517184700.azurewebsites.net/api/Doctor/${user.id}`)
       .then(async (res) => {
         if (!isMuted) return;
-        if(res.ok) {
+        if (res.ok) {
           const data = await res.json();
           setDoctorInfo(data)
         }
       })
-      return () => {
-        isMuted = false;
-      }
+    return () => {
+      isMuted = false;
+    }
   }, [user.id]);
   const length = Object.keys(doctorInfo).length;
 
   return (
     <section className="profile">
-    <Navbar />
+      <Navbar />
       <div className="container">
         {length > 0 ? (
-          <div className="col-9 m-auto mt-5" id="profile-info">
-            <div id="info">
-              <div className="card shadow my-4">
-                <div className="card-body">
-                  <div className="row flex-sm-column flex-md-row text-center">
-                    {/* <!-- profile image --> */}
-                    <div className="col-6">
-                      <img src={imageProfile} alt="" />
-                    </div>
-                    {/* <!-- End profile image --> */}
-                    {/* <!--  username + name --> */}
-                    <div className="info-text col-6 d-flex flex-column justify-content-evenly">
-                      <div>{doctorInfo.email}</div>
-                      <div>{doctorInfo.displayName}</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="card-info">
-              <h3>
-                address: <span>{doctorInfo.address}</span>
-              </h3>
-              <h3>
-                gender: <span>{doctorInfo.gender}</span>
-              </h3>
-              <h3>
-                phoneNumber: <span>{doctorInfo.phoneNumber}</span>
-              </h3>
+          <div class="card col-lg-3 mx-auto my-3">
+            <img src={imageProfile} class="card-img-top" alt="user " />
+            <div class="card-body">
+              <div><b style={{ width: '30%' }}>Name :</b> <span className="mx-3">{doctorInfo.displayName}</span> </div>
+              <div><b style={{ width: '30%' }}> Number :</b> <span className="mx-3">{doctorInfo.phoneNumber}</span></div>
+              <div><b style={{ width: '30%' }}>gender: </b><span className="mx-3">{doctorInfo.gender}</span></div>
+              <div><b style={{ width: '30%' }}>address: </b><span className="mx-3">{doctorInfo.address}</span></div>
             </div>
           </div>
         ) : (
           <div className="loading-wave">
-  <div className="loading-bar"></div>
-  <div className="loading-bar"></div>
-  <div className="loading-bar"></div>
-  <div className="loading-bar"></div>
-</div>
+            <div className="loading-bar"></div>
+            <div className="loading-bar"></div>
+            <div className="loading-bar"></div>
+            <div className="loading-bar"></div>
+          </div>
         )}
       </div>
     </section>
@@ -71,3 +49,4 @@ const Profile = () => {
 };
 
 export default Profile;
+

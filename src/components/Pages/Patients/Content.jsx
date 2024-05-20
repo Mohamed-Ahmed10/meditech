@@ -88,22 +88,28 @@ const Content = () => {
           {checkData > 0 ? (
             <>
               <p className="ps-4 paragragh-top">
-                <b>Patient/</b>
-                <span>{patientInfo.userName}</span>
+                <b>Patient / </b>
+                <span className="name">{patientInfo.userName}</span>
               </p>
               <div className="patient-details ">
                 <h4 className="text-lowercase">Patient Details</h4>
-                <div className="row-one d-flex">
-                  <h5 className="pe-3">Full Name</h5>
-                  <p className="pe-3">{patientInfo.userName}</p>
-                  <h5 className="pe-3">Address</h5>
-                  <p>{patientInfo.address}</p>
-                </div>
-                <div className="row-one d-flex">
-                  <h5 className="pe-3">Telephone</h5>
-                  <p className="pe-3">{patientInfo.telephone}</p>
-                  <h5 className="pe-3">Gender</h5>
-                  <p>{patientInfo.gender}</p>
+                <div className="row row-cols-2 w-50">
+                  <div className="col">
+                    <span className="me-3 text-dark fw-bold">Full Name : </span>
+                    <span>{patientInfo.userName}</span>
+                  </div>
+                  <div className="col">
+                    <span className="me-3 text-dark fw-bold">Address : </span>
+                    <span>{patientInfo.address}</span>
+                  </div>
+                  <div className="col">
+                    <span className="me-3 text-dark fw-bold">Telephone : </span>
+                    <span>{patientInfo.telephone}</span>
+                  </div>
+                  <div className="col">
+                    <span className="me-3 text-dark fw-bold">Gender : </span>
+                    <span>{patientInfo.gender}</span>
+                  </div>
                 </div>
               </div>
             </>
@@ -112,7 +118,7 @@ const Content = () => {
           )}
         </div>
         <div className="sec-two mb-5">
-          <h4 className="text-center my-3 text-primary fw-bold">
+          <h4 className="ps-4 my-3 fw-bold">
             Prescriptions
           </h4>
           <div className="prescriptions">

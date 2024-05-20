@@ -309,7 +309,7 @@ input[type="checkbox" i] {
 }
 
 span {
-  color: var(--input-color);
+  color: #747474;
 }
 
 .i-login {
@@ -358,10 +358,6 @@ span {
 .fa-circle-plus {
 
   color: var(--gray-color);
-}
-
-.fa-trash {
-  color: var(--red-colo);
 }
 
 .trashstyle {
@@ -449,8 +445,8 @@ span {
   border: 1px solid transparent;
   padding: .375rem .75rem;
   font-size: 20px;
-  width: 180px;
-  height: 50px;
+  /* width: 180px; */
+  /* height: 50px; */
   border-radius: .25rem;
 
   /* transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; */
@@ -548,4 +544,24 @@ footer .container .row {
 .dayData:hover {
   background-color: var(--main-color);
   color: #FFF
+}
+
+.delete_forever {
+  background-color: #a3b1cc !important;
+}
+
+.box_container {
+  padding-bottom: 35px !important;
+  padding-top: 8px !important;
+}
+
+.data_output {
+  color: #57657F;
+  font-size: 14px;
+  width: 50%;
+}
+
+.info {
+  width: 280px;
+  justify-content: space-between;
 }

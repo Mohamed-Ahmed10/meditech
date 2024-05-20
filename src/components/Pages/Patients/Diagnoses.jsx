@@ -23,27 +23,27 @@ const Diagnoses = ({ addPrescriptions }) => {
       ?
       (
         <div
-          className="info-but info-diagnoses bg-white p-2 col-8 mt-5 d-flex align-items-center justify-content-between "
+          className="top-left bg-white d-flex me-4 w-50 p-3 mb-2 rounded-2  justify-content-between align-items-center pb-4 p-2 box_container"
         >
           <div className="but-left ">
-            <p className="fs-3">{diagnoses}</p>
+            <div className="heading">{diagnoses}</div>
           </div>
           <div className="icons">
             <button
               onClick={() => btnRemoveBox()}
-              className="me-5 d-flex align-items-center justify-content-center "
+              className="btn me-5 delete_forever d-flex align-items-center justify-content-center border"
             >
-              <i className="fa-solid fa-trash"></i>
+              <i className="fa-solid fa-trash text-danger"></i>
             </button>
           </div>
         </div>
       ) :
       (
         <div
-          className="info-but info-diagnoses bg-white p-2 col-8 mt-5 d-flex align-items-center justify-content-between "
+          className="box_container top-left bg-white d-flex me-4 p-3 mb-2 rounded-2 w-50 justify-content-between align-items-center"
         >
           <div className="but-left ">
-            <p className="fs-3">Diagnoses:  </p>
+            <div className="heading">Diagnoses  </div>
           </div>
         </div>
       )

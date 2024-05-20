@@ -43,7 +43,7 @@ const Prescriptions = () => {
             <Box name="Medicine" boxes={el.medications} />
             <h4 className="mt-5">Diagnoses</h4>
             <div>
-              <div className="info-but info-diagnoses bg-white p-2 col-8 mt-5 d-flex align-items-center justify-content-between ">
+              <div className="top-left bg-white d-flex me-4 p-3 mb-2 rounded-2  justify-content-between align-items-center">
                 <div className="but-left ">
                   <p className="fs-3">{el.illnessDescription}</p>
                 </div>

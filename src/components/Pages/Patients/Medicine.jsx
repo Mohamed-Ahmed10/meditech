@@ -95,7 +95,7 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
       <div className={`overly ${showModal ? "" : "hide"}`}></div>
       <div className={`modal-special ${showModal ? "" : "hide"}`}>
         <h2>{Prescriptions} Details</h2>
-        <div className="row ">
+        <div className="row d-flex justify-content-center g-3">
           <label htmlFor="dropdown">Name</label>
           <div className="dropdown" id="dropdown">
             <button
@@ -111,7 +111,7 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
             </ul>
           </div>
         </div>
-        <div className="row mt-3 ">
+        <div className="row mt-3 d-flex justify-content-center g-3">
           <label htmlFor="dose">{modalInput}</label>
           <input
             id="dose"
@@ -143,37 +143,37 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
             <i className="fa-solid fa-circle-plus"></i>
           </button>
         </h4>
-        <div className="info-row-one d-grid ">
+        <div className="">
           {
             boxesContent.length > 0
               ?
               (
                 boxesContent.map((el) =>
-                  <div key={el.id} className="top-left bg-white d-flex me-4 p-3 mb-2 rounded-2  justify-content-between align-items-center">
+                  <div key={el.id} className="top-left bg-white d-flex me-4 w-50 p-3 mb-2 rounded-2  justify-content-between align-items-center pb-4 p-2 box_container">
                     <div className="info-box">
-                      <div className="info-top d-flex">
-                        <h5 className="pe-3">{Prescriptions} Name : </h5>
-                        <p className="pe-3">{el.name}</p>
+                      <div className="info d-flex">
+                        <div className="pe-3">{Prescriptions} Name  </div>
+                        <div className="pe-3 data_output">{el.name}</div>
                       </div>
-                      <div className="info-but d-flex ">
-                        <h5 className="pe-3">{Prescriptions} {modalInput} : </h5>
-                        <p className="pe-3">{el[modalInput]} {Prescriptions === "Medicine" ? "Times a day" : ""}</p>
+                      <div className="info d-flex ">
+                        <div className="pe-3">{Prescriptions} {modalInput}  </div>
+                        <div className="pe-3 data_output">{el[modalInput]} {Prescriptions === "Medicine" ? "Times a day" : ""}</div>
                       </div>
                     </div>
-                    <button onClick={() => btnRemoveBox(el.id)} className="me-5 delete_forever d-flex align-items-center justify-content-center ">
-                      <i className="fa-solid fa-trash"></i>
+                    <button onClick={() => btnRemoveBox(el.id)} className="btn me-5 delete_forever d-flex align-items-center justify-content-center border">
+                      <i className="fa-solid fa-trash text-danger"></i>
                     </button>
                   </div>
                 )
               )
               :
-              <div className="top-left bg-white d-flex me-4 p-3 mb-2 rounded-2  justify-content-between align-items-center">
+              <div className="top-left bg-white d-flex me-4 w-50 p-3 mb-2 rounded-2  justify-content-between align-items-center pb-4 p-2 box_container">
                 <div className="info-box">
-                  <div className="info-top d-flex">
-                    <h5 className="pe-3">{Prescriptions} Name : </h5>
+                  <div className="info d-flex">
+                    <div className="pe-3 heading">{Prescriptions} Name  </div>
                   </div>
-                  <div className="info-but d-flex ">
-                    <h5 className="pe-3">{Prescriptions} {modalInput} : </h5>
+                  <div className="info d-flex ">
+                    <div className="pe-3 heading">{Prescriptions} {modalInput}  </div>
                   </div>
                 </div>
               </div>
