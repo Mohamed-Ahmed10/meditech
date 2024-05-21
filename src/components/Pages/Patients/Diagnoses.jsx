@@ -33,7 +33,7 @@ const Diagnoses = ({ addPrescriptions }) => {
               onClick={() => btnRemoveBox()}
               className="btn me-5 delete_forever d-flex align-items-center justify-content-center rounded-circle p-1 " width="30"
             >
-              <img src={deleteIcon} alt="delete icon"  width={20} height={20} />
+              <img src={deleteIcon} alt="delete icon" width={20} height={20} />
             </button>
           </div>
         </div>
@@ -42,9 +42,7 @@ const Diagnoses = ({ addPrescriptions }) => {
         <div
           className="box_container top-left bg-white d-flex me-4 p-3 mb-2 rounded-2 w-50 justify-content-between align-items-center"
         >
-          <div className="but-left ">
-            <div className="heading">Diagnoses  </div>
-          </div>
+          <div>Diagnoses  </div>
         </div>
       )
   return (
@@ -63,6 +61,7 @@ const Diagnoses = ({ addPrescriptions }) => {
         <div className={`modal-diagnoses ${showModalDiagnoses ? "" : "hide"}`}>
           <h2>Diagnoses</h2>
           <textarea
+            max="30"
             ref={Ref}
           ></textarea>
           <div className="row mt-4 buttons">

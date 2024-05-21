@@ -14,7 +14,8 @@ const Box = ({ name, boxes }) => {
             </div>
             <div className="info d-flex align-items-center">
               <span className="pe-3">{name} {name === "Medicine" ? "Dose" : "Price"}</span>
-              <span className="pe-3 data_output">{el[modalInput]} {name === "Medicine" ? "Times a da" : ""}</span>
+              {console.log(el)}
+              <span className="pe-3 data_output">{el[modalInput]} {name === "Medicine" ? "Times a day" : ""}</span>
             </div>
           </div>
         </div>
