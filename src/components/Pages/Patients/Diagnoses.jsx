@@ -31,9 +31,9 @@ const Diagnoses = ({ addPrescriptions }) => {
           <div className="icons">
             <button
               onClick={() => btnRemoveBox()}
-              className="me-5 d-flex align-items-center justify-content-center "
+              className="btn me-5 delete_forever d-flex align-items-center justify-content-center rounded-circle p-1 " width="30"
             >
-              <i className="fa-solid fa-trash"></i>
+              <img src={deleteIcon} alt="delete icon"  width={20} height={20} />
             </button>
           </div>
         </div>

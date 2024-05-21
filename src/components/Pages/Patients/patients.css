@@ -318,3 +318,12 @@ td h4 div {
 span.name {
   color: #576580
 }
+
+.but-left {
+  max-width: 90%;
+}
+
+.but-left .heading {
+  max-width: 74%;
+  overflow-wrap: break-word;
+}

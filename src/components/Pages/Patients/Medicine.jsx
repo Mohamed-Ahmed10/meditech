@@ -165,10 +165,10 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
                           </div>
                         </div>
                       </div>
-                      <button onClick={() => btnRemoveBox(el.id)} className="btn me-5 delete_forever d-flex align-items-center justify-content-center border">
-                        <i className="fa-solid fa-trash text-danger"></i>
+                      <button onClick={() => btnRemoveBox(el.id)} className="btn me-5 delete_forever d-flex align-items-center justify-content-center rounded-circle p-1 ">
+                        <img src={deleteIcon} alt="delete icon" width={20} height={20}  />
                       </button>
-                    </div>
+                    </div>   
                   </div>
                 )
               )
