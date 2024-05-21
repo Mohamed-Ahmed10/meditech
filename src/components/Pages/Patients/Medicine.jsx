@@ -153,20 +153,20 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
                   <div className="col-6">
                     <div key={el.id} className="m-2 top-left bg-white d-flex p-3  rounded-2  justify-content-between align-items-center pb-5 p-2 box_container">
                       <div className="info-box">
-                        <div className="info d-flex">
+                        <div className="info d-flex align-items-center">
                           <div className="pe-3">{Prescriptions} Name  </div>
                           <div className="pe-3 data_output">{el.name}</div>
                         </div>
-                        <div className="info d-flex ">
+                        <div className="info d-flex align-items-center">
                           <div className="pe-3">{Prescriptions} {modalInput}  </div>
                           <div className="d-flex">
-                            <div className="pe-3 data_output">{el[modalInput]}</div>
-                            <div>{Prescriptions === "Medicine" ? "Times a day" : ""}</div>
+                            <span className="data_output">{el[modalInput]}</span>
+                            <span>{Prescriptions === "Medicine" ? "Times a day" : ""}</span>
                           </div>
                         </div>
                       </div>
-                      <button onClick={() => btnRemoveBox(el.id)} className="btn me-5 delete_forever d-flex align-items-center justify-content-center border ">
-                        <img src={deleteIcon} alt="delete icon" width={25} />
+                      <button onClick={() => btnRemoveBox(el.id)} className="btn me-5 delete_forever d-flex align-items-center justify-content-center border">
+                        <i className="fa-solid fa-trash text-danger"></i>
                       </button>
                     </div>
                   </div>

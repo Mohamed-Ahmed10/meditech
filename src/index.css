@@ -362,6 +362,10 @@ span {
   color: var(--gray-color);
 }
 
+.fa-trash {
+  color: var(--red-colo);
+}
+
 .trashstyle {
   height: 40px;
 }
@@ -561,12 +565,11 @@ footer .container .row {
 .data_output {
   color: #57657F;
   font-size: 14px;
-  width: 50%;
+  margin-inline-end: 5px;
 }
 
 .info {
   width: 320px;
-  justify-content: space-between;
 }
 
 .schedule .table-responsive table,
