@@ -321,7 +321,7 @@ span.name {
 
 .but-left {
   overflow-wrap: break-word;
-  max-width: 90%;
+  width: 90%;
 }
 
 .but-left .heading {
