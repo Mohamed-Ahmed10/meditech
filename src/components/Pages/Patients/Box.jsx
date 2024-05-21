@@ -5,7 +5,7 @@ const Box = ({ name, boxes }) => {
     let modalInput = "price";
     if (name === "Medicine") modalInput = "doses";
     return (
-      <div key={el.id} className="col-6">
+      <div key={el.id} className="col-md-6 col-sm-12">
         <div className="m-2 top-left bg-white d-flex p-3 rounded-2 justify-content-between align-items-center pb-5 p-2 box_container">
           <div className="info-box">
             <div className="info d-flex">

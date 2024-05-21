@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
+import deleteIcon from "../../images/delete.png"
 const Medicine = ({ Prescriptions, addPrescriptions }) => {
   const dispatch = useDispatch();
   const Ref = useRef();
@@ -55,7 +55,7 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
   function handleApply() {
     const medicine = {
       name: medicationName,
-      [modalInput]: Ref.current.value,
+      [modalInput]: +Ref.current.value,
       id: boxId,
     };
     console.log(medicine)
@@ -159,11 +159,14 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
                         </div>
                         <div className="info d-flex ">
                           <div className="pe-3">{Prescriptions} {modalInput}  </div>
-                          <div className="pe-3 data_output">{el[modalInput]} {Prescriptions === "Medicine" ? "Times a day" : ""}</div>
+                          <div className="d-flex">
+                            <div className="pe-3 data_output">{el[modalInput]}</div>
+                            <div>{Prescriptions === "Medicine" ? "Times a day" : ""}</div>
+                          </div>
                         </div>
                       </div>
-                      <button onClick={() => btnRemoveBox(el.id)} className="btn me-5 delete_forever d-flex align-items-center justify-content-center border">
-                        <i className="fa-solid fa-trash text-danger"></i>
+                      <button onClick={() => btnRemoveBox(el.id)} className="btn me-5 delete_forever d-flex align-items-center justify-content-center border ">
+                        <img src={deleteIcon} alt="delete icon" width={25} />
                       </button>
                     </div>
                   </div>

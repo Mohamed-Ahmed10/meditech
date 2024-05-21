@@ -1,6 +1,6 @@
 import { Fragment, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
+import deleteIcon from "../../images/delete.png";
 const Diagnoses = ({ addPrescriptions }) => {
   const Ref = useRef();
   const dispatch = useDispatch();
@@ -31,9 +31,9 @@ const Diagnoses = ({ addPrescriptions }) => {
           <div className="icons">
             <button
               onClick={() => btnRemoveBox()}
-              className="btn me-5 delete_forever d-flex align-items-center justify-content-center border"
+              className="btn me-5 delete_forever d-flex align-items-center justify-content-center border " 
             >
-              <i className="fa-solid fa-trash text-danger"></i>
+              <img src={deleteIcon} alt="delete icon" width={25}/>
             </button>
           </div>
         </div>

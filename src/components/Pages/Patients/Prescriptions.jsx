@@ -42,21 +42,26 @@ const Prescriptions = () => {
             </h4>
             <Box name="Medicine" boxes={el.medications} />
             <h4 className="mt-5">Diagnoses</h4>
-            <div>
-              <div className="top-left bg-white d-flex me-4 p-3 mb-2 rounded-2  justify-content-between align-items-center">
-                <div className="but-left ">
-                  <p className="fs-3">{el.illnessDescription}</p>
+            <div className="row">
+              <div className="col-6">
+
+                <div className="m-2 top-left bg-white d-flex p-3  rounded-2  justify-content-between align-items-center pb-5 p-2 box_container">
+                  <div className="but-left ">
+                    <p className="fs-3">{el.illnessDescription}</p>
+                  </div>
                 </div>
               </div>
             </div>
             <Box name="Analysis" boxes={el.digitalXRays} />
             <Box name="X-Ray" boxes={el.tests} />
-            <button
-              onClick={() => removePrescriptions(el.prescriptionId)}
-              className="remove-prescriptions btn mt-5 mb-5 fs-4"
-            >
-              Remove
-            </button>
+            <div className="text-center">
+              <button
+                onClick={() => removePrescriptions(el.prescriptionId)}
+                className="remove-prescriptions btn mt-5 mb-5 fs-4"
+              >
+                Remove
+              </button>
+            </div>
           </div>
         )}
       </Fragment>
