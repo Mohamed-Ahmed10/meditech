@@ -310,7 +310,7 @@ input[type="checkbox" i] {
   font-size: 20px;
 }
 
-span {
+span.data_output {
   color: #747474;
 }
 

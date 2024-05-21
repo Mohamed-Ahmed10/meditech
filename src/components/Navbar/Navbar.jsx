@@ -65,7 +65,7 @@ const Navbar = () => {
               <NavLink className="mx-1" to={"/profile"}>
                 <i className="fa-regular fa-user pe-2"></i>
               </NavLink>
-              <NavLink className="mx-1" to={"/"} onClick={handleLogout}>
+              <NavLink className="mx-1" to={"/login"} onClick={handleLogout}>
                 <i className="fa-solid fa-arrow-right-from-bracket"></i>
               </NavLink>
             </div>
