@@ -168,7 +168,7 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
                           <div className="pe-3">{Prescriptions} {modalInput}  </div>
                           <div className="d-flex">
                             <span className="data_output">{el[modalInput]}</span>
-                            <span>{Prescriptions === "Medicine" ? "Times a day" : ""}</span>
+                            <span className="data_output">{Prescriptions === "Medicine" ? "Times a day" : ""}</span>
                           </div>
                         </div>
                       </div>

@@ -42,7 +42,7 @@ const Diagnoses = ({ addPrescriptions }) => {
         <div
           className="box_container top-left bg-white d-flex me-4 p-3 mb-2 rounded-2 w-50 justify-content-between align-items-center"
         >
-          <div>Diagnoses  </div>
+          <div className="diagnose">Diagnoses  </div>
         </div>
       )
   return (

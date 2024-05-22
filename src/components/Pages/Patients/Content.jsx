@@ -95,19 +95,19 @@ const Content = () => {
                 <div className="row row-cols-2 w-50">
                   <div className="col">
                     <span className="me-3 text-dark fw-bold">Full Name : </span>
-                    <span>{patientInfo.userName}</span>
+                    <span className="data_output">{patientInfo.userName}</span>
                   </div>
                   <div className="col">
                     <span className="me-3 text-dark fw-bold">Address : </span>
-                    <span>{patientInfo.address}</span>
+                    <span className="data_output">{patientInfo.address}</span>
                   </div>
                   <div className="col">
                     <span className="me-3 text-dark fw-bold">Telephone : </span>
-                    <span>{patientInfo.telephone}</span>
+                    <span className="data_output">{patientInfo.telephone}</span>
                   </div>
                   <div className="col">
                     <span className="me-3 text-dark fw-bold">Gender : </span>
-                    <span>{patientInfo.gender}</span>
+                    <span className="data_output">{patientInfo.gender}</span>
                   </div>
                 </div>
               </div>

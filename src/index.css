@@ -295,8 +295,9 @@ input[type="checkbox" i] {
   overflow-x: scroll;
 }
 
+
 .section-two .tableContainer {
-  border: 15px solid var(--main-color);
+  border: 12px solid var(--main-color);
   border-radius: 12px;
 }
 
@@ -560,6 +561,10 @@ footer .container .row {
 .box_container {
   padding-bottom: 35px !important;
   padding-top: 8px !important;
+}
+
+.box_container>.diagnose {
+  color: #747474
 }
 
 .data_output {
