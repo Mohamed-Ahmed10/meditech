@@ -43,7 +43,7 @@ const Prescriptions = () => {
               <b>Prescriptions#{el.prescriptionId}</b>
             </h4>
             <Box name="Medicine" boxes={el.medications} />
-            <h4 className="mt-3">Diagnoses</h4>
+            <h4 className="mt-3 ms-2">Diagnoses</h4>
             <div className="row">
               <div className="col-6">
 

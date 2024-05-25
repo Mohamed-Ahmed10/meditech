@@ -25,7 +25,7 @@ const Box = ({ name, boxes }) => {
   return (
     <>
       <div className={`content-one ${name === "Medicine" ? "" : "mt-5"}`}>
-        <h4 >
+        <h4 className="ms-2">
           {name}
         </h4>
         <div className="row">

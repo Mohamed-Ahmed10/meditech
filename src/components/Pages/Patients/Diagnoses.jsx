@@ -33,7 +33,7 @@ const Diagnoses = ({ addPrescriptions }) => {
           <div className="icons">
             <button
               onClick={() => btnRemoveBox()}
-              className="btn me-5 delete_forever d-flex align-items-center justify-content-center rounded-circle p-1 " width="30"
+              className="btn me-2 delete_forever d-flex align-items-center justify-content-center rounded-circle p-1 " width="30"
             >
               <img src={deleteIcon} alt="delete icon" width={20} height={20} />
             </button>
@@ -42,7 +42,7 @@ const Diagnoses = ({ addPrescriptions }) => {
       ) :
       (
         <div
-          className="box_container top-left  d-flex me-4 p-3 mb-2 rounded-2 w-50 justify-content-between align-items-center" style={{ backgroundColor: '#457FE2' }}>
+          className="box_container top-left  d-flex me-4  mb-2 rounded-2 w-50 justify-content-between align-items-center" style={{ backgroundColor: '#457FE2' }}>
           <div className="diagnose ">Diagnoses  </div>
         </div>
       )

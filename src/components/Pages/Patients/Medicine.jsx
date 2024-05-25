@@ -153,14 +153,14 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
             <CiCirclePlus stroke-width="1.5" color="#FFF" />
           </button>
         </h4>
-        <div className="row g-2">
+        <div className="row g-4">
           {
             boxesContent.length > 0
               ?
               (
                 boxesContent.map((el) =>
                   <div className="col-6">
-                    <div key={el.id} className="m-2 top-left text-white  d-flex p-3  rounded-2  justify-content-between align-items-center pb-5 p-2 box_container" style={{ backgroundColor: '#457FE2' }}>
+                    <div key={el.id} className="my-2 top-left text-white  d-flex  rounded-2  justify-content-between align-items-center  box_container" style={{ backgroundColor: '#457FE2' }}>
                       <div className="info-box">
                         <div className="info d-flex align-items-center">
                           <div className="pe-3">{Prescriptions} Name  </div>
@@ -174,7 +174,7 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
                           </div>
                         </div>
                       </div>
-                      <button onClick={() => btnRemoveBox(el.id)} className="btn me-5 delete_forever d-flex align-items-center justify-content-center rounded-circle p-1 ">
+                      <button onClick={() => btnRemoveBox(el.id)} className="btn me-2 delete_forever d-flex align-items-center justify-content-center rounded-circle p-1 ">
                         <img src={deleteIcon} alt="delete icon" width={20} height={20} />
                       </button>
                     </div>
@@ -182,13 +182,15 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
                 )
               )
               :
-              <div className="col-6 top-left bg-white d-flex w-50 p-3 rounded-2  justify-content-between align-items-center pb-5 p-2 box_container">
-                <div className="info-box">
-                  <div className="info d-flex">
-                    <div className="pe-3 heading">{Prescriptions} Name  </div>
-                  </div>
-                  <div className="info d-flex ">
-                    <div className="pe-3 heading">{Prescriptions} {modalInput}  </div>
+              <div className="col-6">
+                <div className="my-2 top-left text-white  d-flex  rounded-2  justify-content-between align-items-center  box_container">
+                  <div className="info-box">
+                    <div className="info d-flex">
+                      <div className="pe-3 heading">{Prescriptions} Name  </div>
+                    </div>
+                    <div className="info d-flex ">
+                      <div className="pe-3 heading">{Prescriptions} {modalInput}  </div>
+                    </div>
                   </div>
                 </div>
               </div>
