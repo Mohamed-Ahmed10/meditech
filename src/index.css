@@ -39,13 +39,58 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #007fff;
+  background: #0F67FE80;
   border-radius: 15px;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
   background: #0F67FE;
+} */
+
+/*  
+.patient-table {
+  border-collapse: collapse !important;
+  border: none !important;
+  
+} */
+
+.patient-table tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: none;
+  border-style: none;
+  border-width: 0;
+}
+
+.patient-table thead,
+.patient-table tbody,
+.patient-table td {
+  border: none !important;
+  border-bottom: 1px solid rgba(28, 10, 83, 0.515) !important;
+  border-right: none !important;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+
+}
+
+.tableContainer {
+  background-color: #0C57D8;
+  color: white;
+  margin: 30px 0 100px 0;
+}
+
+.patient-table-head {
+  background-color: #457FE2;
+
+}
+
+.section-two .tableContainer {
+  border: none !important;
+  border-radius: 12px;
 }
 
 
@@ -137,8 +182,8 @@ body {
 }
 
 .main-btn {
-  color: var(--secwhite-color);
-  background-color: var(--main-color);
+  color: var(--secwhite-color) !important;
+  background-color: var(--main-color) !important;
   width: 230px;
   height: 60px;
   border-radius: 8px;
@@ -146,7 +191,7 @@ body {
 }
 
 .main-btn:hover {
-  color: var(--secwhite-color);
+  color: var(--secwhite-color) !important;
 }
 
 
@@ -296,10 +341,7 @@ input[type="checkbox" i] {
 }
 
 
-.section-two .tableContainer {
-  border: 12px solid var(--main-color);
-  border-radius: 12px;
-}
+
 
 /*  END SCHEDULE-SECTION  */
 
@@ -312,7 +354,7 @@ input[type="checkbox" i] {
 }
 
 span.data_output {
-  color: #747474;
+  color: white;
 }
 
 .i-login {
@@ -324,9 +366,10 @@ span.data_output {
 } */
 
 .patient-details {
-  background-color: var(--light-color);
+  background-color: #0C57D8 !important;
   padding: 10px;
   border-radius: 5px;
+  color: white;
 
 }
 
@@ -335,9 +378,10 @@ span.data_output {
 }
 
 .sec-two .prescriptions {
-  background-color: var(--light-color);
+  background-color: #0C57D8;
   padding: 10px;
   border-radius: 5px;
+  color: white;
 }
 
 .sec-two .prescriptions .info-row-one .top-left .info-top,
@@ -434,6 +478,31 @@ span.data_output {
   border-top: 0px solid #dee2e6;
   border-bottom-right-radius: calc(.3rem - 1px);
   border-bottom-left-radius: calc(.3rem - 1px);
+}
+
+
+
+.first-btn {
+
+  display: inline-block;
+  font-weight: 600;
+  line-height: 1.5;
+  color: white !important;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #0d6efd !important;
+  border: 1px solid transparent;
+
+  font-size: 24px;
+  width: 180px;
+  height: 50px;
+  border-radius: .25rem;
+  /* transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; */
+
 }
 
 .btn {
@@ -537,19 +606,25 @@ footer .container .row {
 
 
 .subTitle {
-  font-size: 1.7rem;
+  font-weight: 600;
+  font-size: 36px;
 }
 
 .dayData {
   cursor: pointer;
-  height: 100px;
+  height: 145px;
   line-height: 100px;
-  width: 210px;
+  width: 150px;
+  background-color: #BBCCE8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.dayData.active,
-.dayData:hover {
-  background-color: var(--main-color);
+.dayData.active {
+  /* background: var(--main-color) !important; */
+  background: url(./components/images/active_bg.png) 7% 50% var(--main-color) no-repeat !important;
   color: #FFF
 }
 
@@ -563,12 +638,10 @@ footer .container .row {
   padding-top: 8px !important;
 }
 
-.box_container>.diagnose {
-  color: #747474
-}
+
 
 .data_output {
-  color: #57657F;
+  color: white;
   font-size: 14px;
   margin-inline-end: 5px;
 }
@@ -591,7 +664,7 @@ footer .container .row {
 }
 
 .swal2-popup {
-  background: #57657f;
+  background: #457FE2;
   color: #FFF;
 }
 
@@ -602,4 +675,51 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm:focus {
 .modal-diagnoses .buttons {
   justify-content: center;
   gap: 10px;
+}
+
+.btn-size {
+  background-color: #457FE2 !important;
+  color: white !important;
+}
+
+.box_container {
+  background-color: #457FE2 !important;
+}
+
+.container-prescription {
+  background-color: #457FE2;
+  padding: 60px;
+}
+
+/* .prescription {
+  width: 60% !important;
+
+
+  
+} */
+table {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  overflow: hidden;
+}
+
+table tr {
+  border-color: #040919;
+  border-style: solid;
+  border-width: 0 !important;
+}
+
+
+.table>:not(caption)>*>* {
+  border-color: #040919 !important;
+}
+
+.schedule .boxes {
+
+  padding-left: 0;
+
+}
+
+.boxes .table-responsive td {
+  padding-left: 0;
 }

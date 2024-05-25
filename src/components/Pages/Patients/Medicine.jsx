@@ -1,11 +1,13 @@
 import { Fragment, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import deleteIcon from "../../images/delete.png"
+import { CiCirclePlus } from "react-icons/ci";
+
 const Medicine = ({ Prescriptions, addPrescriptions }) => {
   const dispatch = useDispatch();
   const Ref = useRef();
   let modalInput = "";
-  if (Prescriptions === "Medicine") modalInput = "doses";
+  if (Prescriptions === "Medicine") modalInput = "dose";
   else if (Prescriptions === "X-Ray") modalInput = "price";
   else modalInput = "price";
   let priceName = "";
@@ -54,8 +56,8 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
 
   function handleApply() {
     let name = ""
-    if (modalInput === "doses") {
-      name = "doses"
+    if (modalInput === "dose") {
+      name = "dose"
     }
     else {
       name = "price"
@@ -125,7 +127,7 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
             id="dose"
             type="number"
             ref={Ref}
-            disabled={modalInput === "doses" ? false : true}
+            disabled={modalInput === "dose" ? false : true}
           />
         </div>
         <div className="row mt-4 buttons">
@@ -148,7 +150,7 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
               Ref.current.value = "";
             }}
           >
-            <i className="fa-solid fa-circle-plus"></i>
+            <CiCirclePlus stroke-width="1.5" color="#FFF" />
           </button>
         </h4>
         <div className="row g-2">
@@ -158,17 +160,17 @@ const Medicine = ({ Prescriptions, addPrescriptions }) => {
               (
                 boxesContent.map((el) =>
                   <div className="col-6">
-                    <div key={el.id} className="m-2 top-left bg-white d-flex p-3  rounded-2  justify-content-between align-items-center pb-5 p-2 box_container">
+                    <div key={el.id} className="m-2 top-left text-white  d-flex p-3  rounded-2  justify-content-between align-items-center pb-5 p-2 box_container" style={{ backgroundColor: '#457FE2' }}>
                       <div className="info-box">
                         <div className="info d-flex align-items-center">
                           <div className="pe-3">{Prescriptions} Name  </div>
-                          <div className="pe-3 data_output">{el.name}</div>
+                          <div className="pe-3 data_output text-white fw-light">{el.name}</div>
                         </div>
                         <div className="info d-flex align-items-center">
-                          <div className="pe-3">{Prescriptions} {modalInput}  </div>
+                          <div className="pe-3 ">{Prescriptions} {modalInput}  </div>
                           <div className="d-flex">
-                            <span className="data_output">{el[modalInput]}</span>
-                            <span className="data_output">{Prescriptions === "Medicine" ? "Times a day" : ""}</span>
+                            <span className="data_output text-white fw-light ">{el[modalInput]}</span>
+                            <span className="data_output text-white fw-light ">{Prescriptions === "Medicine" ? "Times a day" : ""}</span>
                           </div>
                         </div>
                       </div>

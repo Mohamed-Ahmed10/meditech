@@ -1,4 +1,4 @@
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Content = () => {
@@ -24,15 +24,14 @@ const Content = () => {
   }
   function formatDate(date) {
     const newDate = new Date(date);
-    const options = { day: 'numeric', month: 'long', year: 'numeric' };
-    const formattedDate = newDate.toLocaleDateString(undefined, options);
+    const formattedDate = ((newDate.getDate() > 9) ? newDate.getDate() : ('0' + newDate.getDate())) + '/' + ((newDate.getMonth() > 8) ? (newDate.getMonth() + 1) : ('0' + (newDate.getMonth() + 1))) + '/' + newDate.getFullYear()
     return formattedDate
   }
   // Constants
   const boxes = doctorInfo.map((el, index) =>
     <td
       key={index}
-      className={`text-center p-5 fs-4 ${selectedBoxes === index ? "active" : ""}`}
+      className={`text-center  px-1 fs-4 ${selectedBoxes === index ? "active" : ""}`}
     >
       <div
         className={`rounded border-1 border m-1 border-primary dayData ${index === selectedBoxes ? 'active' : ''}`}
@@ -44,15 +43,15 @@ const Content = () => {
   const tableInfo = table.map((el, index) => {
     return (
       <tr key={index}>
-        <th scope="row" className="fw-bold text-center">
+        <th scope="row" className="fw-bold text-center text-white border-bottom">
           # {el.patientId}
         </th>
         <td>
-          <Link to={`/patients/${el.patientId}`} id="button1" className="border-0 bg-white">
+          <Link to={`/patients/${el.patientId}`} id="button1" className="border-0  text-white text-decoration-none">
             {el.patient}
           </Link>
         </td>
-        <td>{formatDate(el.date)}</td>
+        <td className=" text-white">{formatDate(el.date)}</td>
       </tr>
     )
   })
@@ -81,7 +80,7 @@ const Content = () => {
         <div className="days">
           <ul className="boxes">
             <div className="table-responsive">
-              <table className="table caption-top">
+              <table className="table caption-top m-0 ">
                 <tbody>
                   <tr>
                     {boxes}
@@ -91,20 +90,21 @@ const Content = () => {
             </div>
           </ul>
         </div>
-        <div className="section-two pt-5">
+        <div className="section-two pt-2">
           {table.length > 0 ?
             <>
-              <h3 className="fw-bold mb-4">The Day Patients</h3>
-              <div id="tabs-1">
-                <div className="tableContainer my-3">
-                  <table className="table table-bordered border-primary mb-0">
-                    <thead>
-                      <tr>
-                        <th scope="col" width="10%">Patient ID</th>
-                        <th scope="col" className="fw-bold">
+
+              <div id="tabs-1" className=" ">
+                <div className="tableContainer   ">
+                  <p className="fw-bold mb-0 px-4 py-3 ">The Day Patients</p>
+                  <table className="table  patient-table  text-center  mb-0" >
+                    <thead className="patient-table-head">
+                      <tr >
+                        <th scope="col" width="10%" className="px-1 text-white ">Patient ID</th>
+                        <th scope="col" className="fw-bold text-white">
                           Patient Name
                         </th>
-                        <th scope="col" className="fw-bold">
+                        <th scope="col" className="fw-bold text-white">
                           Appointment Date
                         </th>
                       </tr>

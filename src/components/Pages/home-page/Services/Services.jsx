@@ -30,7 +30,7 @@ const Services = () => {
                         <img src={image3} alt="" />
                         <div className="content text-start">
                             <h3 className="boxes">Make Prescriptions</h3>
-                            <p>Generate and send <br /> prescriptions safely and swiftly <br /> to pharmacies.</p>
+                            <p>Generate and send  <br />prescriptions safely and swiftly <br /> to pharmacies.</p>
                         </div>
 
                     </div>
@@ -38,7 +38,7 @@ const Services = () => {
                 <div className="sec-title mt-5 mb-5">
                     <h2 className="pb-5">Join Us Now</h2>
                     <form action="login.html">
-                        <Link to={"/login"} className="btn btn-primary btn-lg">
+                        <Link to={"/login"} className="btn btn-primary btn-lg first-btn  pt-2">
                             Get Started
                         </Link>
                     </form>

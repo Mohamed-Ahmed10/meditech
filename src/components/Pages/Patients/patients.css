@@ -21,13 +21,37 @@
 }
 
 .sec-one .patient-details {
-  background-color: var(--light-color);
+  background-color: #0C57D8 !important;
   padding: 10px;
   border-radius: 5px;
+  color: white;
 }
-
+.row-cols-2>* {
+  flex: 0 0 auto;
+  width: 42% !important;
+}
 .sec-one .patient-details .row-one {
   border: none;
+}
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: var(--white-color);
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 30px;
+  /* width: 180px; */
+  /* height: 50px; */
+  border-radius: .25rem;
+  /* transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; */
 }
 
 .prescriptions button i {
@@ -83,9 +107,13 @@
 }
 
 .sec-3th .prescriptions {
-  background-color: var(--light-color);
+  background-color:#0C57D8 !important;
   padding: 10px;
   border-radius: 5px;
+  color: white !important;
+}
+box_container>.diagnose {
+  color: white;
 }
 
 .sec-3th .prescriptions .fa-circle-plus {
@@ -98,7 +126,7 @@
   min-height: 250px;
   padding: 20px 30px;
   margin: auto;
-  background: #57657f;
+  background: #457FE2;
   border: 1px solid rgba(0, 0, 0, 0.2);
   color: #fff;
   left: 50%;
@@ -134,7 +162,7 @@
 }
 
 .modal-special .row input {
-  margin-left: 10px;
+  margin-left: 0px !important ;
   width: 300px;
   display: block;
   /* border: 2px solid #fff; */
@@ -209,7 +237,7 @@
   min-height: 200px;
   padding: 20px;
   margin: auto;
-  background: #57657f;
+  background: #457FE2;
   border: 1px solid rgba(0, 0, 0, 0.2);
   color: #fff;
   left: 50%;
@@ -234,9 +262,10 @@
 
 .modal-diagnoses h2 {
   text-align: center;
-  font-weight: normal;
   color: #FFF;
-  font-size: 22px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 800 !important;
+  font-size: 45px;
 }
 
 .modal-diagnoses textarea {

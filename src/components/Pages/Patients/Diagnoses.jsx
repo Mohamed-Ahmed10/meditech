@@ -1,6 +1,8 @@
 import { Fragment, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import deleteIcon from "../../images/delete.png";
+import { CiCirclePlus } from "react-icons/ci";
+
 const Diagnoses = ({ addPrescriptions }) => {
   const Ref = useRef();
   const dispatch = useDispatch();
@@ -40,15 +42,14 @@ const Diagnoses = ({ addPrescriptions }) => {
       ) :
       (
         <div
-          className="box_container top-left bg-white d-flex me-4 p-3 mb-2 rounded-2 w-50 justify-content-between align-items-center"
-        >
-          <div className="diagnose">Diagnoses  </div>
+          className="box_container top-left  d-flex me-4 p-3 mb-2 rounded-2 w-50 justify-content-between align-items-center" style={{ backgroundColor: '#457FE2' }}>
+          <div className="diagnose ">Diagnoses  </div>
         </div>
       )
   return (
     <Fragment>
-      <div className={`overly ${showModalDiagnoses ? "" : "hide"}`}></div>
-      <h4 className="mt-5">
+      <div className={`overly ${showModalDiagnoses ? "" : "hide"}`} ></div>
+      <h4 className="mt-3 ">
         Diagnoses
         {/*<-- Button trigger modal --> */}
         <button
@@ -56,10 +57,11 @@ const Diagnoses = ({ addPrescriptions }) => {
           className="btn-icon bg-transparent border-0"
           onClick={() => setShowModalDiagnoses(true)}
         >
-          <i className="fa-solid fa-circle-plus"></i>
+          <CiCirclePlus stroke-width="1.5" color="#FFF" />
+
         </button>
         <div className={`modal-diagnoses ${showModalDiagnoses ? "" : "hide"}`}>
-          <h2>Diagnoses</h2>
+          <h2 className=" fw-bold " >Diagnoses</h2>
           <textarea
             max="30"
             ref={Ref}

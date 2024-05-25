@@ -13,7 +13,7 @@ const Landing = () => {
           <br /> Healthcare
         </p>
         <form action="login.html">
-          <Link to={"/login"} className="btn btn-primary btn-lg">
+          <Link to={"/login"} className="btn btn-primary btn-lg first-btn pt-2">
             Get Started
           </Link>
         </form>
@@ -21,5 +21,5 @@ const Landing = () => {
     </div>
   );
 };
-
+ 
 export default Landing;

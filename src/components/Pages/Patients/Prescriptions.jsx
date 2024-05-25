@@ -23,7 +23,7 @@ const Prescriptions = () => {
       dispatch(prescriptionsDetails({ userId, patientId }));
       Swal.fire({
         title: "Delete Success",
-        text: "You clicked the button!",
+        // text: "You clicked the button!",
         icon: "success",
       });
     })
@@ -36,33 +36,42 @@ const Prescriptions = () => {
         {loading ? (
           <h2>Loading</h2>
         ) : (
-          <div className="prescriptions mt-5 ">
+          <div className="container-prescription rounded-2 mb-4">
+
+            <div className="prescriptions mt-0 ">
             <h4 className="text-center pt-3">
               <b>Prescriptions#{el.prescriptionId}</b>
             </h4>
             <Box name="Medicine" boxes={el.medications} />
-            <h4 className="mt-5">Diagnoses</h4>
+            <h4 className="mt-3">Diagnoses</h4>
             <div className="row">
               <div className="col-6">
 
-                <div className="m-2 top-left bg-white d-flex p-3  rounded-2  justify-content-between align-items-center pb-5 p-2 box_container">
+                <div className="m-2 top-left  d-flex p-3  rounded-2  justify-content-between align-items-center pb-5 p-2 box_container text-white fw-light  ">
                   <div className="but-left ">
-                    <p className="fs-3">{el.illnessDescription}</p>
+                    <p className=" fs-5 ">{el.illnessDescription}</p>
                   </div>
                 </div>
               </div>
             </div>
             <Box name="Analysis" boxes={el.digitalXRays} />
-            <Box name="X-Ray" boxes={el.tests} />
+            <Box name="X-Ray" boxes={el.tests}  />
             <div className="text-center">
               <button
                 onClick={() => removePrescriptions(el.prescriptionId)}
-                className="remove-prescriptions btn mt-5 mb-5 fs-4"
-              >
-                Remove
+                className="remove-prescriptions btn mt-3 mb-3 fs-4 w-25">
+                Delete Prescription
               </button>
             </div>
           </div>
+
+
+          </div>
+
+
+
+
+          
         )}
       </Fragment>
     );

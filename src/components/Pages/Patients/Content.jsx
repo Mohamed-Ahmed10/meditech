@@ -4,6 +4,8 @@ import Diagnoses from "./Diagnoses";
 import Medicine from "./Medicine";
 import Swal from "sweetalert2";
 import Prescriptions from "./Prescriptions";
+import { CiCirclePlus } from "react-icons/ci";
+
 import {
   clear,
   prescriptionsDetails,
@@ -48,7 +50,7 @@ const Content = () => {
       }).catch((error) => {
         Swal.fire({
           title: error.response.data.title,
-          text: "You clicked the button!",
+          // text: "You clicked the button!",
           icon: "error",
         });
       })
@@ -86,7 +88,7 @@ const Content = () => {
         <div className="sec-one mt-5 mb-5">
           {checkData > 0 ? (
             <>
-              <p className="ps-4 paragragh-top">
+              <p className="paragragh-top">
                 <b>Patient / </b>
                 <span className="name">{patientInfo.userName}</span>
               </p>
@@ -94,20 +96,20 @@ const Content = () => {
                 <h4 className="text-lowercase">Patient Details</h4>
                 <div className="row row-cols-2 w-50">
                   <div className="col">
-                    <span className="me-3 text-dark fw-bold">Full Name : </span>
-                    <span className="data_output">{patientInfo.userName}</span>
+                    <span className="me-2  text-white">Full Name  </span>
+                    <span className="data_output text-white fw-light">{patientInfo.userName}</span>
                   </div>
                   <div className="col">
-                    <span className="me-3 text-dark fw-bold">Address : </span>
-                    <span className="data_output">{patientInfo.address}</span>
+                    <span className="me-2  text-white">Address  </span>
+                    <span className="data_output text-white fw-light">{patientInfo.address}</span>
                   </div>
                   <div className="col">
-                    <span className="me-3 text-dark fw-bold">Telephone : </span>
-                    <span className="data_output">{patientInfo.telephone}</span>
+                    <span className="me-2   text-white">Telephone  </span>
+                    <span className="data_output text-white fw-light ">{patientInfo.telephone}</span>
                   </div>
                   <div className="col">
-                    <span className="me-3 text-dark fw-bold">Gender : </span>
-                    <span className="data_output">{patientInfo.gender}</span>
+                    <span className="me-2   text-white">Gender  </span>
+                    <span className="data_output text-white fw-light">{patientInfo.gender}</span>
                   </div>
                 </div>
               </div>
@@ -117,8 +119,9 @@ const Content = () => {
           )}
         </div>
         <div className="sec-two mb-5">
-          <h4 className="ps-4 my-3 fw-bold">
-            Prescriptions
+          <h4 className="my-3 fw-bold">
+            <span className="me-2">Prescriptions</span>
+            <CiCirclePlus stroke-width="1.5" color="#000" />
           </h4>
           <div className="prescriptions">
             <Medicine
@@ -136,11 +139,11 @@ const Content = () => {
               />
             </div>
             <div className="icons text-center">
-              <button onClick={applyPrescriptions} className="apply btn my-3 me-5">
-                Apply
+              <button onClick={applyPrescriptions} className="apply btn-size  btn my-3 me-5 w-25">
+              Apply Prescription
               </button>
-              <button onClick={cancelPrescriptions} className="cancel btn my-3">
-                Cancel
+              <button onClick={cancelPrescriptions} className="cancel btn-size btn my-3 w-25">
+              Cancel Prescription
               </button>
             </div>
           </div>
